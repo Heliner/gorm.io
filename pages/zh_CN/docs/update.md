@@ -59,7 +59,7 @@ db.Model(&user).Updates(map[string]interface{}{"name": "hello", "age": 18, "acti
 ```go
 // 使用 Map 进行 Select
 // User's ID is `111`:
-db.Model(&user).Select("name").Updates(map[string]interface{}{"name": "hello", "age": 18, "active": false})
+db.Model(&user).Select("name").Updates(map[string]interface{}{"name": "hello"})
 // UPDATE users SET name='hello' WHERE id=111;
 
 db.Model(&user).Omit("name").Updates(map[string]interface{}{"name": "hello", "age": 18, "active": false})
